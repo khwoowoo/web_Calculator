@@ -1,0 +1,88 @@
+@import 'reset.css';
+
+:root{
+    --background-color: #202020;
+
+    --infix-size:calc(1.5rem + 3vw);;
+    --infix-color: white;
+
+    --button-gray-color: #b6b6b8;
+    --button-darkgray-color: #434345;
+    --button-orange-color: #df8f34;
+
+    --button-font-size:calc(1rem + 1vw);
+}
+
+
+/* Calculator */
+.Calculator{
+    width: 30vw;
+    height: 70vh;
+    background-color: var(--background-color);
+}
+
+/* viewBox */
+.viewBox{
+    display: flex;
+    justify-content: flex-end;
+    width: 30vw;
+    height: 20vh;
+    align-items: flex-end;
+}
+
+.viewBox .infix{
+    /* align-self: flex-end; */
+    font-size: var(--infix-size);
+    color: var(--infix-color);
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+
+/* buttonBox */
+.buttonBox{
+    width: 30vw;
+    height: 50vh;
+    display: grid;
+    gap: 1px 1px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buttonBox > li{
+    width: 7vw;
+    height: 7vh;
+    border: 2px solid black;
+}
+
+
+.buttonBox > li button{
+    width: 7vw;
+    height: 7vh;
+    font-size: var(--button-font-size);
+}
+
+/* .buttonBox > li.big{
+    grid-column: 4;
+    grid-row: 5/8;
+    width: 7vw;
+    height: 14vh;
+} */
+
+.buttonBox > li button:hover{
+    opacity: 0.7;
+}
+
+.buttonBox > li button.color_gray{
+    background-color: var(--button-gray-color);
+    color: black;
+}
+
+.buttonBox > li button.color_darkgray{
+    background-color: var(--button-darkgray-color);
+    color: white;
+}
+
+.buttonBox > li button.color_orange{
+    background-color: var(--button-orange-color);
+    color: white;
+}
